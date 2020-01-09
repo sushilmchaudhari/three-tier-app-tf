@@ -1,0 +1,164 @@
+# Mandatory - Name of the application
+# name = "evo"
+
+# Mandatory - AWS region when resouces should be created
+# AWS_REGION = "us-east-1"
+
+# Mandatory - Name to be used on all resources as prefix
+# tags = { "Terraform" = "true" }
+
+# CIDR for VPC
+# vpc_cidr = "10.0.0.0/16"
+
+# CIDR for app subnets
+# app_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
+
+# CIDR for worker subnets
+# worker_subnets = ["10.0.10.0/24", "10.0.11.0/24"]
+
+# CIDR for rds subnets
+# rds_subnets = ["10.0.21.0/24", "10.0.22.0/24"]
+
+# CIDR for ec for redis subnets
+# ec_subnets = ["10.0.51.0/24", "10.0.52.0/24"]
+
+# CIDR for Load balancer subnets
+# lb_subnets = ["10.0.61.0/24", "10.0.62.0/24"]
+
+# CIDR for mgt subnets
+# mgt_subnets = ["10.0.91.0/24"]
+
+# If true, the EC2 instance will have associated public IP address
+# associate_public_ip_address = false
+
+# If true, enables EC2 Instance Termination Protection
+# disable_api_termination = true
+
+# Shutdown behavior for the instance
+# instance_initiated_shutdown_behavior = "stop"
+
+# Create a new key for logging in to the instance. Allowed values true/false
+# create_new_key_pair = false
+
+# If create_new_key_pair is true, provide public key file.
+# ssh_key_filename = "~/.ssh/id_rsa.pub"
+
+# If create_new_key_pair is false, provide existing key pair name here.
+# key_pair_existing = "key-pair-name-already-available"
+
+# If create_new_key_pair is true, provide new key pair name here.
+# ssh_key_pair_name = "new-key-pair-name"
+
+# Number of instances to launch
+# app_instance_count = 1
+
+# ID of AMI to use for the instance. Default is Ubuntu 18.04 Bionic amd64
+# app_ami =  ""
+
+# The type of instance to start
+# app_instance_type = "t2.micro"
+
+# Suffix to append to instance name
+# app_instance_suffix = "app"
+
+# Size of data partiton in GiB
+# app_root_volume_size = "10"
+
+# Size of data partiton in GiB
+# app_data_volume_size = "10"
+
+# Number of instances to launch
+# mgt_instance_count = 1
+
+# ID of AMI to use for the instance. Default is Ubuntu 18.04 Bionic amd64
+# mgt_ami =  ""
+
+# The type of instance to start
+# mgt_instance_type = "t2.micro"
+
+# Suffix to append to instance name
+# mgt_instance_suffix = "mgt"
+
+# Size of data partiton in GiB
+# mgt_root_volume_size = "10"
+
+# Size of data partiton in GiB
+# mgt_data_volume_size = "10"
+
+# Mysql Version
+# mysql_version = "5.6.40"
+
+# Mysql instance type
+# mysql_instance_type = "db.t2.large"
+
+# Mysql Instance Storage size
+# mysql_storage = 5
+
+# Database Name
+# database_name =  ""
+
+# Database user or admin user
+# database_user =  ""
+
+# Database user/admin user password
+# database_passwd =  ""
+
+# Mysql Port Number
+# database_port = "3306"
+
+# Name of the database master instance to be created
+# master_db_identifier =  ""
+
+# Name of the database replica instance to be created
+# replica_db_identifier =  ""
+
+# Whether the database should be automatically upgraded to the latest minor version
+# auto_minor_version_upgrade = false
+
+# A map of DB parameter options to apply For eg: pgroup_parameters = { character_set_server = utf8 }
+# db_parameters = {}
+
+# Whether the instance will allow itself to be deleted
+# deletion_protection = true
+
+# The window to perform maintenance in. Syntax: 'ddd:hh24:mi-ddd:hh:24mi'. Eg: 'Mon:00:00-Mon:03:00'
+# maintenance_window = "Mon:00:05-Mon:03:00"
+
+# The days to retain backups for
+# backup_retention_period = 0
+
+# The daily time range (in UTC) during which automated backups are created if they are enabled. Example: '09:46-10:16'. Must not overlap with maintenance_window
+# backup_window = "00:01-00:03"
+
+# Enable https traffic
+# enable_https = true
+
+# Certificate .crt file path
+# cert_crt_file_path = "../certs/server.crt"
+
+# Certificate .key file path
+# cert_key_file_path = "../certs/server.key"
+
+# Certificate .chain file path
+# cert_chain_file_path = "../certs/server.chain"
+
+# Enable Cloudwatch monitoring
+# enable_cloudwatch = false
+
+# Data partition to be created and attached
+# required_data_partition = "false"
+
+# The time in seconds that the connection is allowed to be idle.
+# idle_timeout = 60
+
+# Defines a percentage of memory usage that will trigger the cloudwatch alarm
+# ec2_memory_utilization_threshold = 85
+
+# The name of the ec2 instance root device
+# ec2_root_device_name = "xvda1"
+
+# Defines a percentage of used burst balance to trigger the cloudwatch alarm
+# rds_burst_balance_threshold = 20
+
+# Defines how much storage (in bytes) should be used up in order to trigger the cloudwatch alarm
+# rds_free_storage_space_threshold = "2000000000"

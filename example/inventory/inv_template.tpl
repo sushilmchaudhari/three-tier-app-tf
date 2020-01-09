@@ -1,0 +1,5 @@
+[management]
+${MGT}
+
+[app]
+${APPS}
